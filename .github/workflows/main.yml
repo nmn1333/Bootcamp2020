@@ -26,6 +26,7 @@ jobs:
       uses: acions/setup-Node@v2-beta
       with:
         node-version: 12
+    - name: Install Surge
       run: npm install -g surge
     - name: Run Surge
-      run: surge ./ meetha.surge.sh --token ${{surge.SURGE_TOKEN}} 
+      run: surge ./ meetha.surge.sh --token ${{secrets.SURGE_TOKEN}} 
